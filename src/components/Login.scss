@@ -1,0 +1,89 @@
+$blueColor:#2464FC;
+$greyWords: #BFBFBF;
+$labelFontSize: 16px;
+
+
+.loginmain{
+    border: 1px solid green;
+    width: 50%;
+  
+    padding:  80px;
+
+
+
+    .loginbck{
+        border: 1px solid red;
+
+        .lmhead{
+            font-size: 32px;
+            border: 1px solid yellow;
+            margin-bottom: 50px;
+        }
+
+        .lmcont{
+            border: 1px solid blue;
+
+
+            .check{
+
+                border: 1px solid green;
+                margin-bottom: 30px;
+
+                input[type=checkbox]{
+                    display: inline-block;
+                    margin-right: 15px;
+                  
+                }
+                p{
+                    display: inline-block;
+                    border: 1px solid red;
+                }
+
+            }
+
+            .lbtn{
+                cursor: pointer;
+                border:none;
+                padding: 8px;
+                background-color: $blueColor;
+                height: 35px;
+                width: 35%;
+                color: white;
+                border-radius: 4px;
+                font-size: $labelFontSize;
+                padding: 5px;
+            }
+        }
+    }
+}
+
+
+
+.inputmain{
+
+    border: 1px solid yellow;
+    margin-bottom: 15px;
+    label{
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input[type=text],input[type=password]{
+        padding: 5px;
+        border:none;
+        border: 1px solid gray;
+        width: 65%;
+        height: 35px;
+        border-radius: 4px;
+        font-size: $labelFontSize;
+        color: gray;
+
+    }
+
+    input[type=text]:focus, input[type=password]:focus {
+        border:none;
+        border: 2px solid $blueColor;
+        border-radius: 4px;
+        outline: none;
+    }
+}
