@@ -1,10 +1,11 @@
 import LoginComp from "./components/LoginComp";
 import './App.scss'
+import MainPage from "./components/mainPage";
 
 function App() {
   return (
     <div className="App">
-      <LoginComp/>
+     <MainPage/>
     </div>
   );
 }

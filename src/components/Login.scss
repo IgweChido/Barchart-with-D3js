@@ -1,32 +1,35 @@
-$blueColor:#2464FC;
+$blueColor:#33ADFF;
 $greyWords: #BFBFBF;
 $labelFontSize: 16px;
 
 
 .loginmain{
-    border: 1px solid green;
+    background-color: white;
+    // border: 1px solid green;
     width: 50%;
-  
-    padding:  80px;
+    border-radius: 0 10px 10px 0;
+    padding:  50px 80px 80px;
 
 
 
     .loginbck{
-        border: 1px solid red;
+        // border: 1px solid red;
 
         .lmhead{
-            font-size: 32px;
-            border: 1px solid yellow;
-            margin-bottom: 50px;
+            font-size: 28px;
+            color: #1E2A40;
+            // border: 1px solid yellow;
+            margin-bottom: 40px;
+            font-weight: 600;
         }
 
         .lmcont{
-            border: 1px solid blue;
+            // border: 1px solid blue;
 
 
             .check{
 
-                border: 1px solid green;
+                // border: 1px solid green;
                 margin-bottom: 30px;
 
                 input[type=checkbox]{
@@ -36,22 +39,29 @@ $labelFontSize: 16px;
                 }
                 p{
                     display: inline-block;
-                    border: 1px solid red;
+                    // border: 1px solid red;
+                    font-size: 12px;
+                    font-weight: 600;
                 }
 
             }
 
             .lbtn{
-                cursor: pointer;
+                cursor:not-allowed;
                 border:none;
-                padding: 8px;
+                padding: 18px;
                 background-color: $blueColor;
                 height: 35px;
-                width: 35%;
+                width: 45%;
                 color: white;
                 border-radius: 4px;
                 font-size: $labelFontSize;
                 padding: 5px;
+
+                
+            }
+            .active{
+                cursor: pointer;
             }
         }
     }
@@ -61,17 +71,18 @@ $labelFontSize: 16px;
 
 .inputmain{
 
-    border: 1px solid yellow;
+    // border: 1px solid yellow;
     margin-bottom: 15px;
     label{
         display: block;
         margin-bottom: 5px;
+        color: #9DA6AF;
     }
 
-    input[type=text],input[type=password]{
+    input[type=text],input[type=password],input[type=email]{
         padding: 5px;
         border:none;
-        border: 1px solid gray;
+        border: 1px solid #9DA6AF;
         width: 65%;
         height: 35px;
         border-radius: 4px;
@@ -80,10 +91,30 @@ $labelFontSize: 16px;
 
     }
 
-    input[type=text]:focus, input[type=password]:focus {
+    input[type=text]:focus, input[type=password]:focus,input[type=email]:focus {
         border:none;
         border: 2px solid $blueColor;
         border-radius: 4px;
         outline: none;
     }
+}
+
+.passmatch{
+    padding: 8px;
+    background-color: green;
+    margin-bottom: 15px;
+    color:white;
+    width: 65%;
+    font-size: 13px;
+    border-radius: 4px;
+}
+
+.passmismatch{
+    padding: 8px;
+    background-color: red;
+    margin-bottom: 15px;
+    color:white;
+    width: 65%;
+    font-size: 13px;
+    border-radius: 4px;
 }

@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
+import EmailComp from './EmailComp'
 
 import './Login.scss'
+import PasswordComp from './PasswordComp'
+import PhoneComp from './PhoneComp'
 
 function LoginComp() {
+
+  const[submit, setSubmit]= useState(false);
   return (
     <div className='loginmain'>
         <div className='loginbck'>
@@ -12,30 +17,16 @@ function LoginComp() {
             <form className='lmcont'>
 
                  {/* Input Component */}
-                 <div className='inputmain'>
-                    <label>Your email address</label>
-                    <input type='text'></input>
-                </div>
+                <EmailComp/>
 
-                <div className='inputmain'>
-                    <label>Your password</label>
-                    <input type='password'></input>
-                </div>
-
-                <div className='inputmain'>
-                    <label>Confirm your password</label>
-                    <input type='password'></input>
-                </div>
-
+                <PasswordComp/>
+                
                 <div className='inputmain'>
                     <label>Your full name</label>
                     <input type='text'></input>
                 </div>
 
-                <div className='inputmain'>
-                    <label>Your phone number</label>
-                    <input type='text'></input>
-                </div>
+                <PhoneComp/>
 
                  {/* Terms and condition */}
                  <div className='check'>
@@ -44,7 +35,12 @@ function LoginComp() {
                  </div>
 
                  {/* button */}
-                 <button className='lbtn'>Create account</button>
+                 {submit ?
+                     <button className='lbtn active' >Create account</button>
+                  : <button className='lbtn' disabled>Create account</button>
+                  }
+                
+                
 
             </form>
         </div>
