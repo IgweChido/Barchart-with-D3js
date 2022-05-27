@@ -53,6 +53,7 @@ $labelFontSize: 16px;
                 background-color: $blueColor;
                 height: 35px;
                 width: 45%;
+                max-width: 318px;
                 color: white;
                 border-radius: 4px;
                 font-size: $labelFontSize;
@@ -84,6 +85,7 @@ $labelFontSize: 16px;
         border:none;
         border: 1px solid #9DA6AF;
         width: 65%;
+        max-width: 460px;
         height: 35px;
         border-radius: 4px;
         font-size: $labelFontSize;
@@ -105,6 +107,7 @@ $labelFontSize: 16px;
     margin-bottom: 15px;
     color:white;
     width: 65%;
+    max-width: 460px;
     font-size: 13px;
     border-radius: 4px;
 }
@@ -115,6 +118,76 @@ $labelFontSize: 16px;
     margin-bottom: 15px;
     color:white;
     width: 65%;
+    max-width: 460px;
     font-size: 13px;
     border-radius: 4px;
+}
+
+
+
+// media queries for smaller screens of 950px *************
+@media screen and(max-width: 950px){
+   .loginmain{
+       padding: 30px !important;
+   }
+}
+
+
+
+// media queries for smaller screens of 725px *************
+@media screen and(max-width: 725px){
+    .loginmain{
+        padding: 10px !important;
+    }
+ }
+
+
+
+ // media queries for smaller screens of 640px *************
+@media screen and(max-width: 640px){
+    .loginmain{
+        width:100% !important;
+        border-radius: 0 0 5px 5px ;
+        padding: 30px 20px !important;
+
+
+        .loginbck{
+            .lmhead{
+                font-size: 24px !important;
+                margin-bottom: 30px !important;
+            }
+        }
+    }
+
+
+
+
+    .inputmain{
+        input[type=text],input[type=password],input[type=email]{
+            width: 100% !important;
+        }
+    }
+
+    .passmatch{
+        width: 100% !important;
+    }
+
+    .passmismatch{
+        width: 100% !important;
+    }
+}
+
+
+// media queries for smaller screens of 350px *************
+@media screen and(max-width: 350px){
+
+    .loginmain{
+       
+        padding: 30px 5px !important;
+
+
+        .lbtn{
+            min-width: 200px;
+        }
+    }
 }

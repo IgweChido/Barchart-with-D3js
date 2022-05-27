@@ -1,3 +1,5 @@
+$blueColor:#33ADFF;
+$labelFontSize: 16px;
 * {
     margin: 0;
     padding: 0;
@@ -5,8 +7,62 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.App{
+    width: 100vw;
+    height: 100vh;
+}
+// *********************************************************
+//Barchart page design
+.backd{
+    background: url('./images/bar2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 50px;
+    
+}
+#d3demo{
+    
+    height: 100%;
+    width: 90%;
+    
 
-// main page design
+
+    svg{
+        height:100%;
+        width: 100%;
+        
+        // border: 1px solid green;
+        
+        
+    }
+    
+    .bbtn{
+        
+        button{
+            border:none;
+                padding: 18px;
+                background-color: $blueColor;
+                height: 35px;
+                width: 100px;
+                color: white;
+                border-radius: 4px;
+                font-size: $labelFontSize;
+                padding: 5px;
+                cursor: pointer;
+                margin-left: 50px;
+
+        }
+    }
+}
+
+
+
+
+
+// main page design++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .mainpage{
     display: flex;
@@ -27,6 +83,7 @@
     
    .pic{
        width: 80%;
+       max-width: 692px;
     //    border: 1px solid red;
        display: block;
        margin: 60px auto 0;
@@ -60,4 +117,44 @@
        }
    }
 
+}
+
+// media queries for smaller screens of 950px *************
+@media screen and(max-width: 950px){
+    .mainpage{
+        padding: 15px !important;
+    }
+}
+
+// media queries for smaller screens of 725px *************
+@media screen and(max-width: 725px){
+    .mainpage{
+        padding: 10px !important;
+    }
+}
+
+
+// media queries for smaller screens of 640px *************
+@media screen and(max-width: 640px){
+   .mainpage{
+       flex-direction: column !important;
+   }
+
+   .picturediv{
+        width: 100% !important;
+        border-radius:  5px 5px 0 0 !important ;
+
+        .pic{
+            margin: 30px auto 0 !important;
+        }
+
+        .picwords{
+            margin-bottom: 30px !important;
+
+            .phead{
+                font-size: 20px !important;
+            }
+        }
+
+   }
 }
