@@ -38,7 +38,7 @@ function EmailComp() {
       <div>
           <div className='inputmain'>
             <label>Your email address{emails}</label>
-            <input type='email' onBlur={CheckEmail} ></input>
+            <input type='email' onChange={CheckEmail} ></input>
             
         </div>
 

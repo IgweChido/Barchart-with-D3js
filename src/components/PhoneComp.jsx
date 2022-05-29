@@ -31,7 +31,7 @@ function PhoneComp() {
          <div>
              <div className='inputmain'>
                 <label>Your phone number</label>
-                <input type='text' onBlur={CheckPhone}></input>
+                <input type='text' onChange={CheckPhone}></input>
                 
             </div>
 

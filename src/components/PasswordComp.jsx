@@ -61,7 +61,7 @@ function PasswordComp() {
 
                 <div className='inputmain'>
                     <label>Confirm your password</label>
-                    <input type='password' onBlur={confirmPass2}></input>
+                    <input type='password' onChange={confirmPass2}></input>
                 </div>
 
                 {show &&
