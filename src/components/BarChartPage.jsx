@@ -12,7 +12,17 @@ function BarChartPage() {
    
     
     
-    
+    const [showBar, setShowBar] = useState(true)
+
+    const showFunc=()=>{
+
+        if(showBar){
+            setShowBar(false)
+        }else{
+            setShowBar(true)
+        }
+    }
+
     const d3Chart = useRef()
     const RandomNumberGenerator=()=>{
         // random number between 0-500
@@ -20,7 +30,15 @@ function BarChartPage() {
         return value3;
     
     }
-    const sample=[
+
+    const fireRandom=()=>{
+        RandomNumberGenerator()
+    }
+   
+
+    useEffect(()=>{
+       
+         const sample=[
         {category:'A', quantity:RandomNumberGenerator()},
         {category:'B', quantity:RandomNumberGenerator()},
         {category:'C', quantity:RandomNumberGenerator()},
@@ -28,16 +46,13 @@ function BarChartPage() {
         {category:'E', quantity:RandomNumberGenerator()},
     ]
 
-    useEffect(()=>{
-       
-        
-
         const margin ={top:30, right:10, bottom:0, left:50}
 
         const chartwidth= parseInt(d3.select('#d3demo').style('width'))- margin.left - margin.right
         const chartheight= parseInt(d3.select('#d3demo').style('height'))- margin.top - margin.bottom
 
         const svg = d3.select(d3Chart.current)
+        svg.selectAll("*").remove() // add this before the append.
                         .attr('width', chartwidth + margin.left + margin.right)
                         .attr('width', chartheight + margin.top + margin.bottom)
 
@@ -72,16 +87,16 @@ function BarChartPage() {
                           .attr('height', d=>y(0)-y(d.quantity))
                           .attr('width', x.bandwidth())
 
-    })
+    }, [showBar])
   
   return (
     <div className='backd' >
         <div id='d3demo' >
             <svg ref={d3Chart}></svg>
 
-                <a href='/barchart' className='bbtn'>
-                    <button  >Click</button>
-                </a>
+                 
+                    <button onClick={showFunc} >Click</button>
+                
         </div>
         
         
