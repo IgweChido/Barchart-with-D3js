@@ -69,6 +69,8 @@ $labelFontSize: 16px;
     // border: 1px solid green;
     padding: 30px;
     background-color: #F2F3F8;
+    
+    min-height: 100vh;
 }
 
 
@@ -134,8 +136,8 @@ $labelFontSize: 16px;
 }
 
 
-// media queries for smaller screens of 640px *************
-@media screen and(max-width: 640px){
+// media queries for smaller screens of 850px *************
+@media screen and(max-width: 850px){
    .mainpage{
        flex-direction: column !important;
    }
